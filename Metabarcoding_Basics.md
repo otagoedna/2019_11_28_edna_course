@@ -23,6 +23,25 @@ The next two information types come after clustering the sample sequences. The g
 
  ![alt text](images/Slide02.png)
 
-An additional important type is the product of taxonomic assignment of the representative sequences. 
+An additional important type is the product of taxonomy classification of the representative sequences, here called the *feature taxonomy*
 
 ![alt text](images/Slide03.png)
+
+## Feature tables are key to metabarcoding analyses
+
+The feature table ties together many sources of information in your analysis. It combines the per sample frequencies of each rep seq, and to its taxonomic assignment, and these can be linked to the sample metadata. 
+
+![alt text](images/Slide11.png)
+
+Feature Tables are the centre of multiple downstream analyses
+
+![alt text](images/Slide12.png)
+
+![alt text](images/Slide13.png)
+
+
+
+
+
+
+
