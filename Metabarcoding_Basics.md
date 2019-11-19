@@ -19,11 +19,10 @@ The first two file types have to do with your sample data: your sequence data, a
 
 ![alt text](images/Slide01.png)
 
-The next two information types come after clustering the sample sequences. The generail Qiime2 terminology for these are the *representative sequences* and the *feature table*. The representative sequences (rep seqs) are also known as *Operational Taxonomic Units* (OTUs) or *Amplicon Sequence Variants* (ASVs), depending on how they are produced (e.g. clustering or denoising). The last type is a table that specifies how many sequences of each rep seq are found in each sample.
+The next two information types come after clustering the sample sequences. The general Qiime2 terminology for these are the *representative sequences* and the *feature table*. The representative sequences (rep seqs) are also known as *Operational Taxonomic Units* (OTUs) or *Amplicon Sequence Variants* (ASVs), depending on how they are produced (e.g. clustering or denoising). The last type is a table that specifies how many sequences of each rep seq are found in each sample.
 
  ![alt text](images/Slide02.png)
 
-
-
 An additional important type is the product of taxonomic assignment of the representative sequences. 
 
+![alt text](images/Slide03.png)
