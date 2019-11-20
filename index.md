@@ -5,11 +5,11 @@ This is an introduction to the Qiime2 multiverse. The main Qiime2 webpage has ma
 
 ## Lessons
 
-* [**Overview of Qiime2**](overview.md)
-
 * [**Basic Tools for this Workshop**](Metabarcoding_Basics.md)
 
-* [**Initial Workflow**](first_workflow.md)
+* [**Overview of Qiime2**](overview.md)
+
+* [**Getting Started**](chapters/getting_started.md)
 
 * [**Exploring Taxonomy**](taxonomy_assignment/Exploring_Taxonomy_Assignment)
 
