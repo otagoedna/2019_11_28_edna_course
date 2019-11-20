@@ -30,6 +30,7 @@ qiime cutadapt demux-single \
  --i-seqs mp_sub50k_seqs_bc.qza \
  --m-barcodes-file ../sample_metadata.tsv \
  --m-barcodes-column barcode-sequence \
+ --p-minimum-length 120 \
  --o-per-sample-sequences mp_sub50k_demux.qza \
  --o-untrimmed-sequences mp_sub50k_unmatched.qza
 ```

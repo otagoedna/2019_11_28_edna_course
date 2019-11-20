@@ -11,6 +11,8 @@ This is an introduction to the Qiime2 multiverse. The main Qiime2 webpage has ma
 
 * [**Getting Started**](chapters/getting_started.md)
 
+* [**Clustering**](chapters/denoising_and_clustering.md)
+
 * [**Exploring Taxonomy**](taxonomy_assignment/Exploring_Taxonomy_Assignment)
 
 * [**Diversity Analyses**](diversity_analyses/diversity_analyses.md)
