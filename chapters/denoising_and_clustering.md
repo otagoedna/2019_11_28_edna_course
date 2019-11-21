@@ -76,14 +76,5 @@ qiime tools view seqs.qzv
 
 questions: what are the differences between the two 
 
-## Phylogeny
 
-```
-qiime phylogeny align-to-tree-mafft-fasttree \
-  --i-sequences rep-seqs01-dada2.qza \
-  --o-alignment aligned-rep-seqs01.qza \
-  --o-masked-alignment masked-aligned-rep-seqs01.qza \
-  --o-tree unrooted-tree01.qza \
-  --o-rooted-tree rooted-tree01.qza
-```
 
