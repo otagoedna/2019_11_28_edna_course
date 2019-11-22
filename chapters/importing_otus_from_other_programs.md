@@ -7,7 +7,7 @@ The program biom, which comes bundled with the Qiime2 installation, is used to c
 ### Import frequency table
 
 ```
-biom convert -i zotutab_10_changed.txt -o belarus.biom --to-hdf5 
+biom convert -i zotutab_10_changed.txt -o belarus.biom --to-hdf5
 ```
 
 The table in biom format can then be imported into Qiime2:
@@ -25,8 +25,8 @@ qiime tools import \
 ```
 qiime tools import \
   --type 'FeatureData[Sequence]' \
-  --input-path zotus_10.fasta  \
-  --output-path belarus_zotu_rep_seqs.qza
+  --input-path zotus.fasta  \
+  --output-path zotu_rep_seqs.qza
 ```
 
 ### Generate table stats so you can determine --p-sampling-depth

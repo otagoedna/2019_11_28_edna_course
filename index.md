@@ -15,9 +15,9 @@ This is an introduction to the Qiime2 multiverse. The main Qiime2 webpage has ma
 
 * [**Diversity Analyses**](chapters/diversity_analyses.md)
 
-* [**Exploring Taxonomy**](chapters/taxonomy_classification.md)
+* [**Taxonomy Assignment**](chapters/taxonomy_classification.md)
 
-
+* [**Taxonomy Databases**]()
 
 
 ## Important Links
@@ -25,5 +25,11 @@ This is an introduction to the Qiime2 multiverse. The main Qiime2 webpage has ma
 [Qiime2docs](https://docs.qiime2.org/2019.10/) Main index of all Qiime2 content
 
 [Qiime2view](https://view.qiime2.org/) A web browser tool for viewing Qiime2 visualisations
+
+
+## Extended Lessons
+
+* [**More on importing data**](chapters/importing_otus_from_other_programs)
+
 
 
