@@ -20,31 +20,42 @@ Going through the tutorial, merely copying and pasting the commands:
 
 ...Has the risk of not absorbing the information as you go through:
 
-<br>
+<br><br><br>
 
 ![alt text](images/blackBox.png)
+
 <br>
+
 The problem is that often you do not want to start at the beginning or finish at the end
 
 ![alt text](images/customWorkflow.png)
+
 <br>
+
 This workshop will attempt to help you work through many of the examples yourself, so you will be able to better utilise the resources.
-<br>
+
+<br><br><br>
+
 ## Tour of Qiime2 website
 
 Now we will look over the resources on the [**Qiime2 website**](https://docs.qiime2.org/2019.10/)
 
 ![alt text](images/quickTour.png)
-<br>
+
+<br><br><br>
 
 ### Qiime2 basics
 
 ![alt text](images/qii2datatypes.png)
+
 <br>
+
 Here is an example process, with outputs and visualisations added so you can see how you can monitor the progress.
 
 ![alt text](images/exampleProcess.png) 
-<br>
+
+<br><br><br>
+
 And here is the same process, with exports to flat files
 
 ![alt text](images/exampleFlat.png)
