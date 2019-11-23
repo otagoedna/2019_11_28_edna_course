@@ -1,6 +1,6 @@
 # Qiime2
 
-This is an introduction to data analysis with metabarcoding data. We will primarily use the Qiime2 software package, but we don't want to present that as the only way to go. We will a encourage a flexible approach, so, we will go over how to import into Qiime2 and likewise export the results so they can be used by other programs. We will cover the basic elements of virtually all metabarcoding analytic approaches, to provide a starting point.
+This is an introduction to data analysis with metabarcoding data. We will primarily use the Qiime2 software package, but we don't want to present that as the only way to go. We will a encourage a flexible approach, so, we will go over how to import into Qiime2 and likewise export the results so they can be used by other programs. We will cover the basic elements of virtually all metabarcoding analytic approaches, as a starting point.
 
 The Qiime2 multiverse is itself a tool to utilise multiple other software, and there are many options. 
 
