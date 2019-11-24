@@ -25,7 +25,7 @@ The main Qiime2 webpage has many good tutorials, instructions, and descriptions 
 
 * [**Creating and Curating Taxonomy Databases**]()
 
-* [**Importing and Graphing in R**]()
+* [**Importing and Graphing in R**](chapters/Metabarcoding_analyses_with_R.md)
 
 ## Important Links
 
