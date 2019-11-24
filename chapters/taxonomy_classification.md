@@ -8,7 +8,7 @@ Now that we have representative sequences from the denoising process (e.g. ZOTUs
 
 There are three basic approaches to taxonomy classification (and endless variations of each of these): Global alignment, local alignment, and Naive Bayes, or machine learning approaches in general. 
 
-![alt text](images/methodComparison.png)
+![alt text](https://github.com/otagoedna/2019_11_28_edna_course/tree/master/images/methodComparison.png)
 
 for a discussion of them see the [**paper**](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-018-0470-z). 
 
@@ -16,7 +16,7 @@ We will start with the machine-learning based classification method, as that is 
 
 ### Machine Learning
 
-![alt text](images/machineLearningDescr.png)
+![alt text](../images/machineLearningDescr.png)
 
 <br><br>
 
