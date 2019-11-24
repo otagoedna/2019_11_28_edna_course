@@ -11,20 +11,24 @@ Here is an overview of the Qiime2 workflow:
 ### Most metabarcoding pipelines have similar steps
 
 ![alt text](images/similar_steps.png)
-<br>
+
+<br><br><br>
+
 ### Risk of 'copy/paste' tutorials
 
 Going through the tutorial, merely copying and pasting the commands:
 
 ![alt text](images/copyPaste.png)
 
+<br><br><br>
+
 ...Has the risk of not absorbing the information as you go through:
 
-<br><br><br>
+
 
 ![alt text](images/blackBox.png)
 
-<br>
+<br><br><br>
 
 The problem is that often you do not want to start at the beginning or finish at the end
 
