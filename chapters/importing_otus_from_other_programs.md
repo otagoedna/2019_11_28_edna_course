@@ -1,4 +1,4 @@
-## Importing OTUs and tables from other programs
+# Importing OTUs and tables from other programs
 
 You can see that the two main components that you need to run the diversity analyses is a frequency table and representative sequences. This means we should be able to import results from other other programs, such as OBITools, into Qiime2 to run the statistics. We will try this using the table and ZOTUs from the previous workshop. The only other file you will need is a sample metadata file, which can be as simple or complicated as you need.
 
