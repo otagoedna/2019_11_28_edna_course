@@ -21,7 +21,7 @@ The main Qiime2 webpage has many good tutorials, instructions, and descriptions 
 
 * [**Taxonomy Assignment**](chapters/taxonomy_classification.md)
 
-* [**Taxonomy Databases**]()
+* [**Taxonomy Databases**](chapters/taxonomy_databases.md)
 
 * [**Creating A Taxonomy Database**](chapters/build_database.md)
 
