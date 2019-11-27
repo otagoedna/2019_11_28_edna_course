@@ -92,9 +92,74 @@ pco$data$Vectors %>%
   ggtitle("Unweighted UniFrac")
 ```
 
+## Plotting Taxonomy
+
+For plotting taxonomy, we will be using a combination of qiime2R and MicrobeR, which will require us to import some of the data a little differently.
+
+First, we will import metadata as a simple table
+
+```
+sampleMetadata <- read.table("sample_metadata.tsv", sep='\t', header=T, row.names=1, comment="")
+
+View(sampleMetadata)
+```
+
+Now we will import the frequency table
 
 
+```
+freqs <- read_qza("mp_full_table-dada2.qza")
 
+View(freqs$data)
+```
+
+Import taxonomy
+
+```
+taxonomy <- read_qza("mp_full_rep-seqs-dada2_NB_taxonomy.qza")
+
+View(taxonomy)
+```
+
+Now we have to convert the taxonomy table for use with MicrobeR
+
+```
+tax_table<-do.call(rbind, strsplit(as.character(taxonomy$data$Taxon), "; "))
+
+colnames(tax_table)<-c("Kingdom","Phylum","Class","Order","Family","Genus","Species")
+
+rownames(tax_table)<-taxonomy$data$Feature.ID
+```
+
+Plot with MicrobeR, using body_site category
+
+```
+Microbiome.Barplot(Summarize.Taxa(freqs$data, 
+  as.data.frame(tax_table))$Family, sampleMetadata, CATEGORY="body_site")
+```
+
+Try with a different category
+
+```
+Microbiome.Barplot(Summarize.Taxa(freqs$data, 
+  as.data.frame(tax_table))$Family, sampleMetadata, CATEGORY="year")
+```
+
+Plot more features (default is 10)
+
+```
+Microbiome.Barplot(Summarize.Taxa(freqs$data, 
+  as.data.frame(tax_table))$Family, sampleMetadata, 15, CATEGORY="body_site")
+```
+
+Plot with ggplotly for interactive features
+
+```
+library(plotly)
+
+ggplotly(Microbiome.Barplot(Summarize.Taxa(freqs$data, 
+  as.data.frame(tax_table))$Family, sampleMetadata, CATEGORY="body_site"))
+```
 
 
 
