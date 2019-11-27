@@ -38,6 +38,6 @@ The main Qiime2 webpage has many good tutorials, instructions, and descriptions 
 
 * [**More on importing data**](chapters/importing_otus_from_other_programs)
 
-* [**Filtering Tables**]()
+* [**Filtering Tables**](chapters/filtering_tables.md)
 
 
