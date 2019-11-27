@@ -1,80 +1,83 @@
 # Denoising and clustering
 
+Now that the initial sequences are processed, we will create representative sequences from them, where each sequence will represent multiple replicates and similar sequences. The [**Qiime2 overview**](https://docs.qiime2.org/2019.10/tutorials/overview/#denoising-and-clustering) tutorial has a good description of the two main processes, which will try here. 
+
 ## Denoising
 
 ```
 qiime dada2 denoise-single \
-  --i-demultiplexed-seqs demux01.qza \
+  --i-demultiplexed-seqs {DEMUX_SEQS}.qza \
   --p-trim-left 0 \
   --p-trunc-len 120 \
-  --o-representative-sequences rep-seqs01-dada2.qza \
-  --o-table table01-dada2.qza \
-  --o-denoising-stats stats01-dada2.qza
+  --o-representative-sequences {REP-SEQS}.qza \
+  --o-table {FREQ-TABLE}.qza \
+  --o-denoising-stats {DENOISING-STATS}.qza
 ```
 
 ```
 qiime metadata tabulate \
-  --m-input-file stats01-dada2.qza \
-  --o-visualization stats01-dada2.qzv
+  --m-input-file {DENOISING-STATS}.qza \
+  --o-visualization {DENOISING-STATS_VIZ}.qza
 ```
 
 ```
 qiime feature-table summarize \
-  --i-table table01-dada2.qza \
-  --o-visualization table01.qzv \
+  --i-table {FREQ-TABLE}.qza \
+  --o-visualization {FREQ-TABLE_VIZ}.qzv \
   --m-sample-metadata-file sample_metadata.tsv
 ```
 
 ```
 qiime feature-table tabulate-seqs \
-  --i-data rep-seqs01-dada2.qza \
-  --o-visualization rep-seqs01-dada2_VZ.qzv
+  --i-data {REP-SEQS}.qza \
+  --o-visualization {REP-SEQS_VIZ}.qzv
 ```
 
 ## Clustering with vsearch
 
-First, dereplicate the sequences
+To cluster with vsearch first, dereplicate the sequences
 
 ```
 qiime vsearch dereplicate-sequences \
-  --i-sequences mp_sub50k_demux.qza \
-  --o-dereplicated-table mp_sub50k_VStable.qza \
-  --o-dereplicated-sequences mp_sub50k_VSrep-seqs.qza
+  --i-sequences {DEMUX_SEQS}.qza \
+  --o-dereplicated-table {FREQ-TABLE-DEREP}.qza \
+  --o-dereplicated-sequences {DEREP-SEQS}.qza
 ```
 
 ```
 qiime vsearch cluster-features-de-novo \
-  --i-table mp_sub50k_VStable.qza \
-  --i-sequences mp_sub50k_VSrep-seqs.qza \
+  --i-table {FREQ-TABLE-DEREP}.qza \
+  --i-sequences {DEREP-SEQS}.qza \
   --p-perc-identity 0.99 \
-  --o-clustered-table mp_sub50k_VStable-dn-99.qza \
-  --o-clustered-sequences mp_sub50k_VSrep-seqs-dn-99.qza
+  --o-clustered-table {FREQ-TABLE}.qza \
+  --o-clustered-sequences {REP-SEQS}.qza
 ```
 
 tabulate and summarise
 
 ```
-time qiime feature-table tabulate-seqs \
-  --i-data mp_sub50k_VSrep-seqs-dn-99.qza \
-  --o-visualization mp_sub50k_VSrep-seqs-dn-99_Viz.qzv
-```
-
-```
 qiime feature-table summarize \
-  --i-table mp_sub50k_VStable-dn-99.qza \
-  --o-visualization mp_sub50k_VStable-dn-99_Viz.qzv \
-  --m-sample-metadata-file ../sample_metadata.tsv
+  --i-table {FREQ-TABLE}.qza \
+  --o-visualization {TABLE-SUMMARIZE-VIZ}.qzv \
+  --m-sample-metadata-file sample_metadata.tsv
 ```
 
 ```
-qiime tools view table.qzv
+time qiime feature-table tabulate-seqs \
+  --i-data {REP-SEQS}.qza \
+  --o-visualization {REP-SEQS_VIZ}.qzv
+```
+
+
+```
+qiime tools view {TABLE-SUMMARIZE-VIZ}.qzv
 ```
 
 ```
-qiime tools view seqs.qzv
+qiime tools view {REP-SEQS_VIZ}.qzv
 ```
 
-questions: what are the differences between the two 
+questions: what kind of differences do you observe between the two 
 
 
 

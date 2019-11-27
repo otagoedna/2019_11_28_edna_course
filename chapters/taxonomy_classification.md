@@ -55,7 +55,7 @@ A barplot graph is a good way to compare the taxonomic profile among samples
 
 ```
 qiime taxa barplot \
-  --i-table {TABLE}.qza \
+  --i-table {FREQ-TABLE}.qza \
   --i-taxonomy {TAXONOMY}.qza \
   --m-metadata-file sample_metadata.tsv \
   --o-visualization {TAXA-BAR-PLOTS_VIZ}.qzv
