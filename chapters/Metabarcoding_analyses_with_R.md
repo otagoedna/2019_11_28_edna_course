@@ -32,12 +32,52 @@ View(metadata)
 
 ```
 SVs <- read_qza("{FEATURE-TABLE}.qza")
+
 SVs
+
 SVs$data[1:5,1:5]
+
 View(SVs$data)
 ```
 
 <br>
+
+## Plotting Beta Diversity
+
+First we will import and plot one of the outputs from the beta diversity analyses
+
+```
+pco <- read_qza("{CORE-METRICS-RESULTS}/unweighted_unifrac_pcoa_results.qza")
+```
+
+Then we have to convert the data
+
+```
+pcoConvert <- pco$data$Vectors %>%
+  rename("sample-id"=SampleID) %>% #rename to match the metadata table
+  left_join(metadata) %>%
+  left_join(shannon$data %>% rownames_to_column("sample-id"))
+```
+
+And create a graph object:
+
+```
+pcoPlot <-   ggplot(pcoConvert, aes(x=PC1, y=PC2, 
+  shape=subject, color=body_site, size=shannon)) +
+  geom_point() + 
+  xlab(paste("PC1: ", round(100*pco$data$ProportionExplained[1]), "%")) +
+  ylab(paste("PC2: ", round(100*pco$data$ProportionExplained[2]), "%")) +
+  theme_bw() +
+  ggtitle("Unweighted UniFrac")
+```
+
+Then to view
+
+```
+pcoPlot
+```
+
+<br><br>
 
 ## Plotting Alpha Diversity
 
@@ -49,48 +89,39 @@ import the artifact
 shannon <- read_qza("{CORE-METRICS-RESULTS}/shannon_vector.qza")
 ```
 
-Now we will create a graph
+Then we have to convert the data
 
 ```
-shannon$data %>%
+shannonData <- shannon$data %>%
   as.data.frame() %>%
   rownames_to_column("sample-id") %>%
   left_join(metadata) %>%
-  mutate(DaysSinceExperimentStart=as.numeric(days_since_experiment_start)) %>% #coerce this to be stored as number
-  ggplot(aes(x=DaysSinceExperimentStart, y=shannon, group=subject, color=body_site, shape=reported_antibiotic_usage)) +
+  mutate(DaysSinceExperimentStart=as.numeric(days_since_experiment_start))
+```
+
+Now we will create a graph
+
+```
+shannonPlot <- ggplot(shannonData, aes(x=DaysSinceExperimentStart,
+  y=shannon, group=subject, 
+  color=body_site, 
+  shape=reported_antibiotic_usage)) +
   geom_point(size=4) +
   geom_line() +
-  facet_grid(body_site~subject) + #plot body sites across rows and subjects across columns
+  facet_grid(body_site~subject) + 
   theme_bw() +
-  xlab("Time (days)") +
+  xlab('Time (days)') +
   ylab("Shannon Diversity") +
   ggtitle("Shannon diversity across time")
 ```
 
-<br><br>
-
-## Plotting Beta Diversity
-
-Next we will import and plot one of the outputs from the beta diversity analyses
+and to view
 
 ```
-pco <- read_qza("{CORE-METRICS-RESULTS}/unweighted_unifrac_pcoa_results.qza")
+shannonPlot
 ```
 
-And graph:
 
-```
-pco$data$Vectors %>%
-  rename("sample-id"=SampleID) %>% #rename to match the metadata table
-  left_join(metadata) %>%
-  left_join(shannon$data %>% rownames_to_column("sample-id")) %>%
-  ggplot(aes(x=PC1, y=PC2, shape=subject, color=body_site, size=shannon)) +
-  geom_point() +
-  xlab(paste("PC1: ", round(100*pco$data$ProportionExplained[1]), "%")) +
-  ylab(paste("PC2: ", round(100*pco$data$ProportionExplained[2]), "%")) +
-  theme_bw() +
-  ggtitle("Unweighted UniFrac")
-```
 
 <br><br>
 
@@ -153,16 +184,6 @@ Plot more features (default is 10)
 Microbiome.Barplot(Summarize.Taxa(freqs$data, 
   as.data.frame(tax_table))$Family, sampleMetadata, 15, CATEGORY="body_site")
 ```
-
-Plot with ggplotly for interactive features
-
-```
-library(plotly)
-
-ggplotly(Microbiome.Barplot(Summarize.Taxa(freqs$data, 
-  as.data.frame(tax_table))$Family, sampleMetadata, CATEGORY="body_site"))
-```
-
 
 
 
