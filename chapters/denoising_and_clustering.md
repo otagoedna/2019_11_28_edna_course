@@ -14,11 +14,15 @@ qiime dada2 denoise-single \
   --o-denoising-stats {DENOISING-STATS}.qza
 ```
 
+<br>
+
 ```
 qiime metadata tabulate \
   --m-input-file {DENOISING-STATS}.qza \
   --o-visualization {DENOISING-STATS_VIZ}.qza
 ```
+
+<br>
 
 ```
 qiime feature-table summarize \
@@ -27,13 +31,19 @@ qiime feature-table summarize \
   --m-sample-metadata-file sample_metadata.tsv
 ```
 
+<br>
+
 ```
 qiime feature-table tabulate-seqs \
   --i-data {REP-SEQS}.qza \
   --o-visualization {REP-SEQS_VIZ}.qzv
 ```
 
+<br><br>
+
 ## Clustering with vsearch
+
+Qiime2 provides a [**vsearch clustering tutorial**](https://docs.qiime2.org/2019.10/tutorials/otu-clustering/), an example from which we are doing here.
 
 To cluster with vsearch first, dereplicate the sequences
 

@@ -19,23 +19,45 @@ The first two file types have to do with your sample data: your sequence data, a
 
 ![alt text](images/Slide01.png)
 
+<br>
+
+In Qiime the sample metadata is a simple tab-delimited file with information for each sample:
+
+![alt text](images/metadata_flat_view.png)
+
+<br>
+
+Here is a spreadsheet view, so the different categories are clearer:
+
+![alt text](images/metadata_spreadsheet_view.png)
+
+<br><br>
+
 The next two information types come after clustering the sample sequences. The general Qiime2 terminology for these are the *representative sequences* and the *feature table*. The representative sequences (rep seqs) are also known as *Operational Taxonomic Units* (OTUs) or *Amplicon Sequence Variants* (ASVs), depending on how they are produced (e.g. clustering or denoising). The last type is a table that specifies how many sequences of each rep seq are found in each sample.
 
  ![alt text](images/Slide02.png)
+
+<br>
 
 An additional important type is the product of taxonomy classification of the representative sequences, here called the *feature taxonomy*
 
 ![alt text](images/Slide03.png)
 
-## Feature tables are key to metabarcoding analyses
+<br><br>
+
+## Feature or frequency tables are key to metabarcoding analyses
 
 The feature table ties together many sources of information in your analysis. It combines the per sample frequencies of each rep seq, and to its taxonomic assignment, and these can be linked to the sample metadata. 
 
 ![alt text](images/Slide11.png)
 
+<br><br>
+
 Feature Tables are the centre of multiple downstream analyses
 
 ![alt text](images/Slide12.png)
+
+<br>
 
 ![alt text](images/Slide13.png)
 
