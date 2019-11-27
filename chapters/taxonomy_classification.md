@@ -32,7 +32,7 @@ Use the command below, changing the name of the rep-seqs artifact that you have 
 
 ```
 qiime feature-classifier classify-sklearn \
-  --i-classifier /path/to/references/gg-13-8-99-515-806-nb-classifier.qza \
+  --i-classifier references/gg-13-8-99-515-806-nb-classifier.qza \
   --i-reads {REP-SEQS}.qza \
   --o-classification {TAXONOMY}.qza
 ```
@@ -81,17 +81,18 @@ qiime tools view {TAXA-BAR-PLOTS_VIZ}.qzv
 
 ### Use BLAST search to classify
 
-Now we will try using the BLAST classifier
+Below is a command to use the BLAST classifier. With a virtual machine, this will likely use too much memory, so an output file for this is provided.
 
 ```
 qiime feature-classifier classify-consensus-blast \
-  --i-query mp_sub50k_rep-seqs-dada2.qza \
-  --i-reference-reads /var/DB/greengenes/gg_99_reference_seqs.qza \
-  --i-reference-taxonomy /var/DB/greengenes/gg_99_reference_taxonomy.qza \
+  --i-query {REP-SEQS}.qza \
+  --i-reference-reads references/gg_99_reference_seqs.qza \
+  --i-reference-taxonomy references/gg_99_reference_taxonomy.qza \
   --p-perc-identity 0.97 \
-  --o-classification mp_sub50k_dada2_blast_taxonomy.qza \
+  --o-classification {REP-SEQS_BLAST_TAXONOMY}.qza \
   --verbose
 ```
+
 
 Now generate the same visuals and compare the results from the two classification approaches
 

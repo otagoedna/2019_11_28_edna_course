@@ -92,6 +92,8 @@ pco$data$Vectors %>%
   ggtitle("Unweighted UniFrac")
 ```
 
+<br><br>
+
 ## Plotting Taxonomy
 
 For plotting taxonomy, we will be using a combination of qiime2R and MicrobeR, which will require us to import some of the data a little differently.
