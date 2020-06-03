@@ -1,6 +1,6 @@
 # Taxonomy assignment
 
-Now that we have representative sequences from the denoising process (e.g. ZOTUs, ASVs, ESVs), we can assign taxonomy to them. There are several methods to do this. See the [**Qiime2 Overview**](https://docs.qiime2.org/2019.10/tutorials/overview/#taxonomy-classification-and-taxonomic-analyses) 
+Now that we have representative sequences from the denoising process (e.g. ZOTUs, ASVs, ESVs), we can assign taxonomy to them. There are several methods to do this. See the [**Qiime2 Overview**](https://docs.qiime2.org/2020.2/tutorials/overview/#taxonomy-classification-and-taxonomic-analyses) 
 
 <br><br>
 
