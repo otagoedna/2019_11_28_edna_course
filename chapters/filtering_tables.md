@@ -1,7 +1,7 @@
 # Filtering tables
 
 
-It is possible to filter the feature tables to remove samples or features. There is a [full tutorial](https://docs.qiime2.org/2019.7/tutorials/filtering/) showing many examples. Here we will go over just one.
+It is possible to filter the feature tables to remove samples or features. There is a [full tutorial](https://docs.qiime2.org/2020.2/tutorials/filtering/) showing many examples. Here we will go over just one.
 
 From the FMT full table, we observe that there are many taxa in the phylum Firmicutes across all samples. If we want to explore this group in more depth, we can create a new table with just these taxa.
 
