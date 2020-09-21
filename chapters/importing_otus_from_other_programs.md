@@ -12,7 +12,7 @@ sample-1      $PWD/some/filepath/sample1_R1.fastq
 sample-2      $PWD/some/filepath/sample2_R1.fastq
 ```
 
-See the Qiime2 [**Importing Data Tutorial**](https://docs.qiime2.org/2019.7/tutorials/importing/) for more details, including importing paired end sequences. 
+See the Qiime2 [**Importing Data Tutorial**](https://docs.qiime2.org/2020.8/tutorials/importing/) for more details, including importing paired end sequences. 
 
 Once you have a manifest file, you can import the sequence files into a Qiime2 Artifact. We will start with the FMT run 2 sequences, as it is smaller and will go a little quicker. There is already a manifest file in your main folder called *run_2_manifest.txt*. Change the --input-path parameter in the following command, as well as the name of the output file (--output-path)
 
