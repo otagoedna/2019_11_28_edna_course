@@ -96,7 +96,9 @@ qiime feature-classifier classify-consensus-blast \
 
 Now generate the same visuals and compare the results from the two classification approaches
 
+### Here are some example bar plots
 
+[example bar plot](../example_viz/fish_swarmOTUs_300920_qiiExt1_NB_taxonomy_bar_plots.qzv)
 
 
 
