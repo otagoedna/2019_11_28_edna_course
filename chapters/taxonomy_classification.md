@@ -98,7 +98,11 @@ Now generate the same visuals and compare the results from the two classificatio
 
 ### Here are some example bar plots
 
-[example bar plot](../example_viz/fish_swarmOTUs_300920_qiiExt1_NB_taxonomy_bar_plots.qzv)
+[example bar plot](../example_viz/fish_OTUs_NB_taxonomy_bar_plots.qzv)
+
+[example OTU taxonomy summary](../example_viz/fish_OTUs_NB_taxonomy_VIZ.qzv)
+
+[example OTU sequences](../example_viz/fish_OTUs_tabulation.qzv)
 
 
 
