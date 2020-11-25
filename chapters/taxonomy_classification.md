@@ -104,8 +104,9 @@ Now generate the same visuals and compare the results from the two classificatio
 
 [example OTU sequences](../example_viz/fish_OTUs_tabulation.qzv)
 
+[vsearch OTU taxonomy](../example_viz/fish_OTUs_vsearch_6_taxonomy_VIZ.qzv)
 
-
+[vsearch taxonomy bar plot](../example_viz/fish_OTUs_vsearch_6_taxonomy_bar_plots.qzv)
 
 
 
