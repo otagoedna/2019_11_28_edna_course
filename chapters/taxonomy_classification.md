@@ -98,20 +98,15 @@ Now generate the same visuals and compare the results from the two classificatio
 
 ### Here are some example bar plots
 
-[example bar plot](../example_viz/fish_OTUs_NB_taxonomy_bar_plots.qzv)
+[example bar plot](../example_viz/fish_NB_taxonomy_bar_plots.qzv)
 
-[example OTU taxonomy summary](../example_viz/fish_OTUs_NB_taxonomy_VIZ.qzv)
+[example OTU taxonomy summary](../example_viz/fish_NB_taxonomy_VIZ.qzv)
 
-[example OTU sequences](../example_viz/fish_OTUs_tabulation.qzv)
+[example OTU sequences](../example_viz/fish_tabulation.qzv)
 
 [vsearch OTU taxonomy](../example_viz/fish_OTUs_vsearch_taxonomy_VIZ.qzv)
 
 [vsearch taxonomy bar plot](../example_viz/fish_OTUs_vsearch_taxonomy_barplot.qzv)
-
-
-
-
-
 
 
 
