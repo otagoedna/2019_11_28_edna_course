@@ -108,7 +108,9 @@ Now generate the same visuals and compare the results from the two classificatio
 
 [vsearch taxonomy bar plot](../example_viz/fish_OTUs_vsearch_taxonomy_barplot.qzv)
 
+[**Pathogen bar plot**](../examples/cmb_tl_kraken_freq_pathGenera_filt2topfam_bar-plots.qzv)
 
+[**Most abundant families**](../examples/filt3fam_cmb_tl_kraken_bar-plots.qzv)
 
 
 
